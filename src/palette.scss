@@ -1,0 +1,21 @@
+// _palette.scss
+
+$yellow: #FFD600;
+$dark-blue: #001D3D;
+$navy-blue: #1C274C;
+$medium-blue: #013065;
+$dark-gray: #1E1E1E;
+$white: #FFFFFF;
+
+$palette: (
+  'yellow': $yellow,
+  'dark-blue': $dark-blue,
+  'navy-blue': $navy-blue,
+  'medium-blue': $medium-blue,
+  'dark-gray': $dark-gray,
+  'white': $white,
+);
+
+@function color($color-name) {
+  @return map-get($palette, $color-name);
+}

@@ -1,0 +1,77 @@
+@import "../../palette.scss";
+
+/*LOGOS*/
+#desktopLogo {
+  box-sizing: content-box;
+  max-width: 380px;
+  scale: 0.8;
+
+  @media (max-width: 1034px) {
+    display: none;
+  }
+}
+#mobileLogo {
+  box-sizing: content-box;
+  max-width: 80px;
+  display: none;
+  @media (max-width: 1034px) {
+    display: block;
+  }
+}
+/*FIM DAS LOGOS*/
+
+/*BOTÕES*/
+
+.header-double {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+:host ::ng-deep .custom-menubar {
+
+  border: none;
+  border-radius: 0;
+  box-shadow: 2px 4px 2px black;
+  padding: 8px;
+  background-color: color("dark-gray");
+  &:hover {
+    background-color: color("dark-gray");
+  }
+  &:focus {
+    background-color: color("dark-gray");
+  }
+
+  .p-menuitem-link {
+    background-color: $dark-gray;
+    color: #{$yellow} !important;
+    .p-menuitem-text,
+    .p-submenu-icon {
+      color: $yellow !important;
+    }
+    .pi {
+      color: $yellow !important;
+    }
+  }
+
+  ul.p-submenu-list .p-menuitem-link {
+    background-color: white !important;
+    .p-menuitem-text,
+    .p-menu-icon,
+    .pi {
+      color: $dark-blue !important;
+    }
+  }
+}
+h2 {
+  color: $dark-blue;
+  font-weight: 400;
+  font-size: 19px;
+  background-color: $yellow;
+  box-shadow: 2px 4px 2px black;
+  cursor: pointer;
+  padding: 16px;
+  width: 150px;
+}
+
+/*FIM DOS BOTÕES*/
