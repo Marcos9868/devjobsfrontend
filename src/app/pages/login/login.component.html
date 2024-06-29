@@ -1,0 +1,30 @@
+<section class="login-section">
+    <div class="container">
+      <img src="../../../assets/img/logologin.svg" class="logo">
+      <div class="content">
+        <div class="title">
+          <h1>Bem vindo à Console.job!</h1>
+          <p>Entre na sua conta</p>
+        </div>
+        <form class="form-login" [formGroup]="profileForm">
+          <input 
+            id="email" 
+            type="text" 
+            formControlName="email" 
+            placeholder="Digite seu email.."
+            class="input"
+          >
+          <input 
+            id="password" 
+            type="text" 
+            formControlName="password" 
+            placeholder="Digite sua senha.."
+            class="input"
+          >
+          <a class="forgot-password">Esqueceu a sua senha?</a>
+          <button type="submit" class="btn1">Login</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  
