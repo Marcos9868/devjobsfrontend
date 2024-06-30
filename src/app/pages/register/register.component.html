@@ -1,0 +1,37 @@
+<section class="login-section">
+    <div class="container">
+      <img src="../../../assets/img/logologin.svg" class="logo">
+      <div class="content">
+        <div class="title">
+          <h1>É novo por aqui?</h1>
+          <p>Crie uma conta</p>
+        </div>
+        <form class="form-login" [formGroup]="RegisterForm">
+          <input 
+            id="name"
+            type="text" 
+            formControlName="name" 
+            placeholder="Digite seu nome.."
+            class="input"
+          >
+          <input 
+            id="email" 
+            type="text" 
+            formControlName="email" 
+            placeholder="Digite seu email.."
+            class="input"
+          >
+          <input 
+            id="password" 
+            type="text" 
+            formControlName="password" 
+            placeholder="Digite sua senha.."
+            class="input"
+          >
+          <a class="forgot-password">Já possui uma conta?</a>
+          <button type="submit" class="btn1">Cadastrar</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  

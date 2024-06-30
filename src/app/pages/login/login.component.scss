@@ -1,0 +1,206 @@
+.login-section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+    .container {
+      background: #070d15;
+      border-radius: 20px;
+      height: 90%; 
+      width: 96%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      padding: 20px;
+  
+      img {
+        width: 100px;
+        height: 100px;
+      }
+  
+      .title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+  
+        h1 {
+          font-size: 20px;
+          font-weight: 600;
+          color: #fff;
+        }
+  
+        p {
+          font-size: 16px;
+          color: #717171;
+        }
+      }
+  
+      .form-login {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #f1f1f1f5;
+  
+        .input {
+          width: 100%;
+          height: 48px;
+          outline: none;
+          text-decoration: none;
+          border: none;
+          background: transparent;
+          border-bottom: 3px solid #e89c0d;
+          padding: 0 10px 10px;
+          margin: 10px 0;
+          font-size: 16px;
+          color: #fffffff5;
+          margin: 32px 0;
+        }
+  
+        .forgot-password {
+          font-size: 12px;
+          color: royalblue;
+          text-decoration: none;
+          align-self: flex-start;
+          margin: 10px 0 20px 0;
+          cursor: pointer;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+  
+        .btn1 {
+            font-size: 20px;
+            font-weight: 700;
+            width: 100%;
+            height: 48px;
+            background: #e89c0d;
+            border-radius: 20px;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.5s ease-out;
+            position: relative;
+            overflow: hidden;
+          
+            &:before {
+              content: '';
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              width: 300%;
+              height: 300%;
+              background: rgba(255, 255, 255, 0.2);
+              transition: all 0.75s ease-out;
+              border-radius: 50%;
+              z-index: 1;
+              transform: translate(-50%, -50%) scale(0);
+            }
+          
+            &:hover {
+              transform: scale(1.1) rotate(2deg);
+              background: #013065;
+              box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+              transition: all 0.5s ease-out;
+              color: #fff;
+          
+              &:before {
+                transform: translate(-50%, -50%) scale(1);
+              }
+            }
+          
+            &:after {
+              content: '';
+              position: absolute;
+              inset: 0;
+              background: rgba(255, 255, 255, 0.1);
+              z-index: 0;
+              transition: opacity 0.5s ease-out;
+            }
+          
+
+          }
+      }
+    }
+  
+    @media (min-width: 768px) {
+      .container {
+        flex-direction: row;
+        padding: 24px;
+  
+        img {
+          width: 150px;
+          height: 150px;
+        }
+  
+        .title {
+          h1 {
+            font-size: 24px;
+          }
+  
+          p {
+            font-size: 18px;
+          }
+        }
+  
+        .form-login {
+          .input {
+            width: 300px;
+            margin: 16px 0;
+          }
+  
+          .forgot-password {
+            font-size: 14px;
+          }
+  
+          .btn1 {
+            width: 300px;
+          }
+        }
+      }
+    }
+  
+    @media (min-width: 1024px) {
+      .container {
+        padding: 48px;
+  
+        img {
+          width: 200px;
+          height: 200px;
+        }
+  
+        .title {
+          h1 {
+            font-size: 28px;
+          }
+  
+          p {
+            font-size: 20px;
+          }
+        }
+  
+        .form-login {
+            margin: 0;
+          .input {
+            width: 400px;
+            margin: 32px 0 32px 0;
+          }
+  
+          .forgot-password {
+            font-size: 16px;
+          }
+  
+          .btn1 {
+            width: 400px;
+          }
+        }
+      }
+    }
+  }
