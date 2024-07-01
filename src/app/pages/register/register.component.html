@@ -6,7 +6,7 @@
           <h1>É novo por aqui?</h1>
           <p>Crie uma conta</p>
         </div>
-        <form class="form-login" [formGroup]="RegisterForm">
+        <form class="form-login" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
           <input 
             id="name"
             type="text" 
@@ -29,7 +29,7 @@
             class="input"
           >
           <a class="forgot-password">Já possui uma conta?</a>
-          <button type="submit" class="btn1">Cadastrar</button>
+          <button type="submit" class="btn1" [disabled]="registerForm.invalid">Cadastrar</button>
         </form>
       </div>
     </div>
