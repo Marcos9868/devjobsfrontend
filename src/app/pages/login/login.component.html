@@ -6,7 +6,7 @@
           <h1>Bem vindo à Console.job!</h1>
           <p>Entre na sua conta</p>
         </div>
-        <form class="form-login" [formGroup]="profileForm">
+        <form class="form-login" [formGroup]="profileForm" (ngSubmit)="onSubmit()">
           <input 
             id="email" 
             type="text" 
@@ -16,13 +16,13 @@
           >
           <input 
             id="password" 
-            type="text" 
+            type="password" 
             formControlName="password" 
             placeholder="Digite sua senha.."
             class="input"
           >
           <a class="forgot-password">Esqueceu a sua senha?</a>
-          <button type="submit" class="btn1">Login</button>
+          <button type="submit" class="btn1" [disabled]="profileForm.invalid">Login</button>
         </form>
       </div>
     </div>
